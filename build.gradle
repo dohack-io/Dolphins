@@ -1,0 +1,74 @@
+plugins {
+	id 'java' // java support
+	id 'application' // creates a JVM executable
+	id 'com.diffplug.gradle.spotless' version '3.23.0'// code format
+}
+
+ext {
+	//version (changing these should be considered thoroughly!)
+	javaVersion = JavaVersion.VERSION_1_8
+
+	scriptsLocation = 'gradle' + File.separator + 'scripts' + File.separator //location of script plugins
+	mainClass = ''
+}
+
+apply from: scriptsLocation + 'spotless.gradle'
+apply from: scriptsLocation + 'checkJavaVersion.gradle'
+
+repositories {
+	mavenLocal() //searches in local maven repository, typically ~/.m2/repository
+	jcenter() //searches in bintray's repository 'jCenter', which contains Maven Central
+}
+
+
+dependencies {
+
+	// logging
+
+	// database
+	compile 'org.postgresql:postgresql:+'
+
+	// testing
+	testCompile 'junit:junit:+'
+}
+
+wrapper {
+	gradleVersion = '5.4.1'
+}
+
+version = '0.1-SNAPSHOT'
+description = 'DOLPHINS'
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+application {
+	mainClassName = mainClass
+}
+
+run {
+	//Gradle uses an empty Input as default, leading to a non - blocking behaviour and thus an immediate shutdown
+	standardInput = System.in
+}
+
+jar {
+	manifest {
+		attributes(
+				'Main-Class': mainClass
+		)
+	}
+}
+
+
+task sourcesJar(type: Jar) {
+	getArchiveClassifier().set('sources')
+	from(sourceSets.main.allJava)
+}
+
+task javadocJar(type: Jar) {
+	getArchiveClassifier().set('javadoc')
+	from(javadoc.destinationDir)
+}

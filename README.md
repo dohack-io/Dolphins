@@ -1,7 +1,7 @@
 # Template Repository
-This is a template, please fill it with your teams data. Places to fill in data are marked with a //TODO. If you fail to do so, our jury can't evaluate your project. 
+This is a template, please fill it with your teams data. Places to fill in data are marked with a //TODO. If you fail to do so, our jury can't evaluate your project.
 
-## Description 
+## Description
 //TODO: describe your project
 
 ## Built with
@@ -17,7 +17,7 @@ This is a template, please fill it with your teams data. Places to fill in data 
 //TODO: describe each team member with their background knowledge
 
 ## What's next for your project?
-//TODO: is there anything you've planned to work on after this hackathon? you've got some ideas of features to add? 
+//TODO: is there anything you've planned to work on after this hackathon? you've got some ideas of features to add?
 
 ## How does it look?
 //TODO: got any screenshots? post them here!
