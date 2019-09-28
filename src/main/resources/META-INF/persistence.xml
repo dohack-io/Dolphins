@@ -10,7 +10,7 @@
         <class>de.dohack.dolphins.models.DokumentenTags</class>
         <class>de.dohack.dolphins.models.Kommentar</class>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://172.17.0.1:5432/DOLPHINS"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.4.125.235:5432/DOLPHINS"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
             <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
