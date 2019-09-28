@@ -12,7 +12,7 @@ public class KommentarController {
   @Autowired private KommentarRepository repository;
 
   @RequestMapping("/kommentar/finde/{drucksachenNr}")
-  public String search(@PathVariable String drucksachenNr) {
+  public String search(@PathVariable int drucksachenNr) {
     Dokument dokument = new Dokument();
     dokument.setDrucksachennr(drucksachenNr);
 

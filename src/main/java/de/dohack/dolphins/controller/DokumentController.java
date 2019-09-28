@@ -1,6 +1,9 @@
 package de.dohack.dolphins.controller;
 
+import de.dohack.dolphins.models.Dokument;
 import de.dohack.dolphins.repo.DokumentRepository;
+import java.io.IOException;
+import java.nio.file.Paths;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -8,6 +11,8 @@ import org.springframework.web.multipart.MultipartFile;
 @CrossOrigin()
 @RestController
 public class DokumentController {
+
+  private static final String localPath = "/home/river/Dokumente/Arbeit/Dolphins/Dokumente/";
 
   @Autowired private DokumentRepository repository;
 
@@ -18,28 +23,32 @@ public class DokumentController {
     return dokument;
   }
 
-  //  @PostMapping("/dokument/erstellen")
   @RequestMapping(
       value = "/dokument/erstellen",
       method = RequestMethod.POST,
       consumes = {"multipart/form-data"})
-  public String create(@RequestParam("File") MultipartFile multipartFile) {
+  public String create(
+      @RequestParam("File") MultipartFile multipartFile,
+      @RequestParam("Dokumenttitel") String titel,
+      @RequestParam("Gremium") String gremium,
+      @RequestParam("Kurzbeschreibung") String kurzBeschr,
+      @RequestParam("Tags") String tags) {
+    String dateipfad = localPath + titel.trim();
+    Dokument dokument = new Dokument();
+    dokument.setAutor(null);
+    dokument.setBeschreibung(kurzBeschr);
+    try {
+      multipartFile.transferTo(Paths.get(dateipfad));
+      dokument.setDateipfad(dateipfad);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    dokument = repository.save(dokument);
 
-    //    repository.save(new Customer(customer.getFirstName(), customer.getLastName()));
+    // TODO Tags hinzufügen
 
-    //    String titel = request.getParameter("Dokumententitel");
-    //    System.out.println(titel);
-    System.out.println(multipartFile);
-    return "Customer is created";
+    return "Dokument " + dokument.getDrucksachennr() + " wurde erstellt";
   }
-  //
-  //  @PostMapping("/dokument/erstellen")
-  //  public String create(@RequestBody String string) {
-  //    //    repository.save(new Customer(customer.getFirstName(), customer.getLastName()));
-  //
-  //    System.out.println(string);
-  //    return "Customer is created";
-  //  }
 
   @GetMapping("/dokument/hallo")
   public String dokument() {

@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class Dokument implements Serializable {
 
-  @Id private String drucksachennr;
+  @Id @GeneratedValue private int drucksachennr;
 
   private String titel;
 
@@ -22,11 +22,11 @@ public class Dokument implements Serializable {
   @JoinColumn(name = "autor", referencedColumnName = "anzeigename")
   private Benutzer autor;
 
-  public String getDrucksachennr() {
+  public int getDrucksachennr() {
     return drucksachennr;
   }
 
-  public void setDrucksachennr(String drucksachenNr) {
+  public void setDrucksachennr(int drucksachenNr) {
     this.drucksachennr = drucksachenNr;
   }
 
