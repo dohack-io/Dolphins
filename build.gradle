@@ -27,6 +27,7 @@ dependencies {
 
 	// database
 	compile 'org.postgresql:postgresql:+'
+	compile 'org.hibernate:hibernate-core:5.4.5.Final'
 
 	// testing
 	testCompile 'junit:junit:+'
@@ -61,7 +62,6 @@ jar {
 		)
 	}
 }
-
 
 task sourcesJar(type: Jar) {
 	getArchiveClassifier().set('sources')
