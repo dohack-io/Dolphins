@@ -1,0 +1,88 @@
+<form action="http://yourserver/register.php" method="post">
+<table border="0" cellspacing="2" cellpadding="2">
+  <tbody>
+    <tr>
+    <u>
+      <h1 align="left" >Registrierung</h1>
+      </u>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Anrede:</td>
+      <td>
+        <select name="geschl">
+          <option value="0">Bitte w&auml;hlen</option>
+          <option value="m">Herr</option>
+          <option value="f">Frau</option>
+          <option value="o">Andere</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Vorname:</td>
+      <td>
+        <input maxlength="50" name="Vorname" size="45" type="text" placeholder="max. 50 Zeichen" />
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Nachname:</td>
+      <td>
+        <input maxlength="50" name="Nachname" size="45" type="text" placeholder="max. 50 Zeichen"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Strasse + Nr.:</td>
+      <td>
+        <input maxlength="50" name="Strasse" size="45" type="text" placeholder="max. 50 Zeichen"/>
+      </td>
+    </tr>
+    <tr>
+    <td align="right">PLZ:</td>
+    <td>
+      <input maxlength="5" name="PLZ" size="10" type="text" placeholder="max. 5 Zahlen"/>
+    </td>
+    </tr>
+    <tr>
+      <td align="right">Ort:</td>
+      <td>
+        <input maxlength="50" name="Ort" size="45" type="text" placeholder="max. 50 Zeichen" />
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Anzeige Name:</td>
+      <td>
+        <input name="Land" size="45" type="text" placeholder="min. 3 Zeichen" />
+      </td>
+    </tr>
+    <tr>
+      <td align="right">Email:</td>
+      <td>
+        <input maxlength="80" name="Email" size="45" type="text" placeholder="Gueltige E-Mail Adresse"/>
+      </td>
+    </tr>
+
+    <tr>
+    <td align="right">Passwort:</td>
+    <td>
+        <input name="Passwort" size="45" type="text" placeholder="min. 8 Zeichen. Erlaubt sind: ( a - z ), ( A - Z ), (0 - 9 )" />
+      </td>
+    </tr>
+
+
+    <tr>
+    <td align="right">Passwort:</td>
+    <td>
+        <input name="Passwort" size="45" type="text" placeholder="Passwort Wiederholen" />
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <input type="submit" value="Registrieren" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+</form>
