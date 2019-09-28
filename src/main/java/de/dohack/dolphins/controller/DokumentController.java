@@ -3,6 +3,7 @@ package de.dohack.dolphins.controller;
 import de.dohack.dolphins.models.Dokument;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -14,6 +15,11 @@ public class DokumentController {
     @PostMapping("/dokument-senden")
     public HttpStatus empfangeDokument(@RequestBody Dokument dokument){
         return dbController.persist(dokument) ? HttpStatus.OK : HttpStatus.NOT_ACCEPTABLE;
+    }
+
+    @GetMapping("/dokument-empfangen")
+    public Dokument sendeDokument(@RequestBody String drucksachenNr){
+        return dbController.find(Dokument.class, drucksachenNr);
     }
 
 }
