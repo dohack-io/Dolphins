@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
+<Configuration status="DEBUG">
     <Appenders>
-        <Console name="STDOUT" target="SYSTEM_OUT">
-            <PatternLayout
-                    pattern="%%5sn %-5p %d{HH:mm:ss}|  %m%n"/>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
     </Appenders>
-
     <Loggers>
-
-        <logger name="DolphinLogger" level="ALL" additivity="false">
-            <AppenderRef ref="STDOUT"/>
-        </logger>
-
-        <Root level="ALL"> </Root>
+        <!-- avoid duplicated logs with additivity=false -->
+        <Logger name="DolphinLogger" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
     </Loggers>
 </Configuration>
-

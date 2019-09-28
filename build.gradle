@@ -24,10 +24,13 @@ repositories {
 dependencies {
 
 	// logging
+	compile 'org.apache.logging.log4j:log4j-1.2-api:2.+' // log4j
+	compile 'org.apache.logging.log4j:log4j-core:2.+' // log4j
 
 	// database
 	compile 'org.postgresql:postgresql:+'
-	compile 'org.hibernate:hibernate-core:5.4.5.Final'
+	compile 'org.hibernate:hibernate-entitymanager:5.4.5.Final'
+
 
 	// testing
 	testCompile 'junit:junit:+'

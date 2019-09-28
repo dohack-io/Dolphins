@@ -1,19 +1,17 @@
 package de.dohack.dolphins.models;
 
+import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-public class Dokument {
+public class Dokument implements Serializable {
 
-  @Id private String drucksachenNr;
+  @Id private String drucksachennr;
 
   private String titel;
 
   private String beschreibung;
-
-  private Set<Tag> tags;
 
   private String inhalt;
 
@@ -21,15 +19,15 @@ public class Dokument {
   private Date erstellDatum;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "anzeigeName")
-  private User autor;
+  @JoinColumn(name = "autor", referencedColumnName = "anzeigename")
+  private Benutzer autor;
 
-  public String getDrucksachenNr() {
-    return drucksachenNr;
+  public String getDrucksachennr() {
+    return drucksachennr;
   }
 
-  public void setDrucksachenNr(String drucksachenNr) {
-    this.drucksachenNr = drucksachenNr;
+  public void setDrucksachennr(String drucksachenNr) {
+    this.drucksachennr = drucksachenNr;
   }
 
   public String getTitel() {
@@ -48,14 +46,6 @@ public class Dokument {
     this.beschreibung = beschreibung;
   }
 
-  public Set<Tag> getTags() {
-    return tags;
-  }
-
-  public void setTags(Set<Tag> tags) {
-    this.tags = tags;
-  }
-
   public String getInhalt() {
     return inhalt;
   }
@@ -72,11 +62,11 @@ public class Dokument {
     this.erstellDatum = erstellDatum;
   }
 
-  public User getAutor() {
+  public Benutzer getAutor() {
     return autor;
   }
 
-  public void setAutor(User autor) {
+  public void setAutor(Benutzer autor) {
     this.autor = autor;
   }
 }
