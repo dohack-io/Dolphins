@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%%5sn %-5p %d{HH:mm:ss}|  %m%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+
+        <logger name="DolphinLogger" level="ALL" additivity="false">
+            <AppenderRef ref="STDOUT"/>
+        </logger>
+
+        <Root level="ALL"> </Root>
+    </Loggers>
+</Configuration>
+
