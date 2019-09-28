@@ -10,12 +10,12 @@
     <!-- einbinden des CSS Sheet -->
     <link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <link rel="stylesheet" type="text/css" href="grid.css">
-    
+
 </head>
 
 <body class="container">
-        <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v4.0"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v4.0"></script>
     <header>
         <!-- kopfzeile -->
         <img class="bild" src="dortmunderu.png" alt="Seminar">
@@ -35,10 +35,10 @@
                 <span class="ueberschrift">Startseite</span>
             </div>
             <div id="registry">
-                <button id="anmelden" >
+                <button id="anmelden">
                     Anmelden
                 </button>
-                
+
                 <button type="button" value="Registrieren">
                     Registrieren
                 </button>
@@ -56,7 +56,7 @@
         <!-- navigationsspalte -->
         <ul>
             <li tabindex="0">
-                <a href="#">Rat der Stadt</a>
+                <a id="rat-der-stadt" href="#">Rat der Stadt</a>
             </li>
 
             <li tabindex="0">
@@ -164,19 +164,25 @@
         </ul>
     </nav>
     <main>
-        <!-- PDF Anzeige -->
+        <!-- PDF Anzeige 
         <object data="test.pdf" style="width:100%;height:1000px">
-                <a href="test.pdf">PDF laden</a>
-            </object>    
+            <a href="test.pdf">PDF laden</a>
+        </object>-->
+        <div id="container">
+
+        </div>
+
         <dialog open id="dialog">
-                    <h2>Anmeldung</h2>
-                    <form method="post">
-                       <label for="email">Email-Adresse: </label><input id="email" type="email" />
-                       <label for="passwort">Passwort: </label><input id="passwort" type="text" />
-                     </form>  
-                     <button id="Anmeldung">Anmelden</button>
-                     <button id="Abbruch">Abbrechen</button>
-                 </dialog>
+            <h2>Anmeldung</h2>
+            <form method="post">
+                <label for="email">Email-Adresse: </label>
+                <input id="email" type="email" />
+                <label for="passwort">Passwort: </label>
+                <input id="passwort" type="text" />
+            </form>
+            <button id="Anmeldung">Anmelden</button>
+            <button id="Abbruch">Abbrechen</button>
+        </dialog>
 
     </main>
     <aside class="asidesuche">
@@ -191,16 +197,19 @@
         </form>
     </aside>
     <aside class="asidecom">
-<!-- begin wwww.htmlcommentbox.com -->
-<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
-<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1569701165797");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-<!-- end www.htmlcommentbox.com -->
-        </aside>
+        <!-- begin wwww.htmlcommentbox.com -->
+        <div id="HCB_comment_box">
+            <a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
+        <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"
+        />
+        <script type="text/javascript" id="hcb"> /*<!--*/ if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&opts=16862&num=10&ts=1569701165797"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })(); /*-->*/ </script>
+        <!-- end www.htmlcommentbox.com -->
+    </aside>
 
     <!-- fußzeile -->
     <footer>© Meike Cieslak</footer>
     <script src="dialog.js"></script>
+    <script src="dokumentRequest.js"></script>
 </body>
 
 </html>
