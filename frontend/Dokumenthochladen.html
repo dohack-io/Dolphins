@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dokument hochladen</title>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="StylSheetUpload.css">
+    
+
+
+</head>
+
+<body class="container">
+    <header>
+        <img class="bild" src="dortmunderu.png" alt="Seminar">
+        <div id="logoboxid" class="logoBox">
+            <div>
+                <a href="Startseite.html" title="Startseite der Dokumentenverwaltung">
+                    <figure>
+                        <img class="wappenbild" src="wappen.png" alt="Wappen der Stadt Dortmund">
+                        <figcaption>
+                            <span class="sr-only">Wappen der Stadt Dortmund</span>
+                        </figcaption>
+                    </figure>
+
+                </a>
+            </div>
+            <div id="divueberschrift">
+                <span class="ueberschrift">Dokument hochladen</span>
+            </div>
+
+        </div>
+    </header>
+    <nav>
+        <form action="Dokumenthochladen.html" class="formbutton">
+            <input type="submit" value="Dokument hochladen">
+        </form>
+        <form action="Dokumentbearbeiten.html" class="formbutton">
+            <input type="submit" value="Dokument bearbeiten">
+        </form>
+        <!-- navigationsspalte -->
+        <ul>
+            <li tabindex="0">
+                <a href="#">Rat der Stadt</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Hauptausschuss und Ältestenrat</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Ausschüsse</a>
+                <ul class="submenu">
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bürgerdienste, öffentliche Ordnung, Anregungen und Beschwerden </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bauen, Verkehr und Grün</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Finanzen, Beteiligungen und Liegenschaften</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kinder, Jugend und Familie</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kultur, Sport und Freizeit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Personal und Organisation</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Soziales, Arbeit und Gesundheit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Umwelt, Stadtgestaltung und Wohnen</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Wirtschafts-, Beschäftigungsförderung, Europa, Wissenschaft und
+                            Forschung </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Betriebsausschuss FABIDO</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Rechnungsprüfungsausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Schulausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Wahlprüfungsausschuss</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Behindertenpolitisches Netzwerk</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Beirat bei der unteren Naturschutzbehörde</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Integrationsrat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Seniorenbeirat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Bezirksvertretungen</a>
+                <ul class="submenu">
+                    <li tabindex="0" class="unterpunkt">
+                        <a href="#">Bezirksvertretung Aplerbeck</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Brackel</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Eving</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hörde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hombruch</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Huckarde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Nord</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Ost</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt West</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Lütgendortmund</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Mengede</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Scharnhorst</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form method="post" enctype="multipart/form-data" id="formular" name="formular">
+
+                <label for="Dokumententitel">Titel:</label>
+                <!-- autofocus: direkt in dieses Feld springen required: muss eingegeben werden -->
+                <input type="text" name="doc" id="doctitle" maxlength="100" autofocus required class="erforderlich">
+
+                <p>
+                    <label for="gremium">Gremium:</label>
+                    <!-- dropdownliste -->
+                    <select id="gremiumliste">
+                        <option value="Ausschüsse"></option>
+                        <option value="Bezirksvertretungen">Bezirksvertretung</option>
+                        <option selected value="Rat der Stadt">Rat der Stadt</option>
+                        <option value="Behindertenpolitisch"> Behindertenpolitisch </option>
+                        <option value="Beirat">Beirat</option>
+                        <option value="Integrationsrat">Integrationsrat</option>
+                        <option value="seniorenbeirat">Seniorenbeirat</option>
+                    </select>
+                </p>
+                <p>
+                    <input id="hochgeladene-datei" name="datei" type="file" size="50" accept="text/*" required
+                        class="erforderlich">
+                </p>
+                <p>
+                    <label for="Beschreibung" class="erforderlich">Kurzbeschreibung: </label>
+                    <textarea rows="4" cols="50" required class="erforderlich" id="kurzbeschr"></textarea>
+                </p>
+
+                <p>
+                    <label for="Tags">Tags:</label>
+                    <input type="text" maxlength="100" required class="erforderlich" id="tags">
+                </p>
+
+                <p>
+                    <input type="submit" id="submit" value="OK"/>
+                </p>
+
+
+
+        </form>
+    </main>
+    <aside class="asidesuche">
+        <!--Formular für die Tagsuche-->
+        <form method="get" enctype="multipart/form-data">
+
+            <div>
+                <input type="search" name="sitesearch" id="sitesearch" width=100px placeholder="Website durchsuchen">
+                <input type="submit" value="Suchen" class="suchenbutton">
+                <input type="submit" value="Erweiterte Suche" class="suchenbutton">
+            </div>
+        </form>
+    </aside>
+    <aside class="asidecom">
+        <span class="ueberschrift">Kommentare</span>
+
+    </aside>
+
+    <footer>Lisa Müller</footer>
+    <script src="documentUpload.js"></script>
+</body>

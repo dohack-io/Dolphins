@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+    grid-template-areas :   "header header header" 
+                            "nav haupt asidesuche"
+                            "asidecom asidecom asidecom" 
+                            "footer footer footer";
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+
+header {
+    grid-area: header;
+}
+
+.asidedaten {
+    grid-area: asidedaten;
+
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    width: 100%;
+    grid-area: haupt;
+    display: grid;
+}
+
+.asidesuche{
+    grid-area: asidesuche;
+    width: auto!important;
+}
+
+.asidecom{
+    grid-area: asidecom;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#grid-container2{
+    grid-area: info;
+}
+#grid-container3{
+    grid-area: bild;
+   
+}
+figure img{
+    width:80%;
+}
+@media only screen and (max-width:768px){
+    .container{
+        grid-template-areas : "header header""asidesuche asidesuche""nav haupt""asidecom asidecom""footer footer";
+        grid-template-columns: 0.5fr 1fr;
+    }   
+}
+@media screen and (max-width:480px){
+    main{
+        grid-template-areas: "header""asidesuche""nav""haupt""asidecom""footer";
+
+    }
+    figure img{
+        width:50%;
+    }
+}
