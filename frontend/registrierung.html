@@ -1,0 +1,287 @@
+<!-- DO!HACK -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- zeichen die benutzt werden können-->
+    <meta charset="utf-8" />
+    <!-- das was im Tab steht -->
+    <title>Dokumentenverwaltung Gremien</title>
+    <!-- einbinden des CSS Sheet -->
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <!-- <script src="dialog.js"></script> -->
+    
+</head>
+
+<dialog id="dialog">
+    <h2>Anmeldung</h2>
+    <form method="post">
+        <label for="email">Email-Adresse: </label>
+        <input id="email" type="email" />
+    </form>
+    <form method="post">
+        <label for="email">Passwort: </label>
+        <input id="email" type="email" />
+    </form>
+    <button id="Anmeldung">Anmelden</button>
+    <button id="Abbruch">Abbrechen</button>
+</dialog>
+
+<body class="container">
+    <header>
+        <!-- kopfzeile -->
+        <img class="bild" src="dortmunderu.png" alt="Seminar">
+        <div id="logoboxid" class="logoBox">
+            <div>
+                <a href="Registrierung_V2.html" title="Datenaufnahme der Dokumentenverwaltung">
+                    <figure>
+                        <img class="wappenbild" src="wappen.png" alt="Wappen der Stadt Dortmund">
+                        <figcaption>
+                            <span class="sr-only">Logo von Dolphin</span>
+                        </figcaption>
+                    </figure>
+
+                </a>
+            </div>
+            <div id="divueberschrift">
+                <span class="ueberschrift">Registrierung</span>
+            </div>
+            <div id="registry">
+                <button id="anmelden" type="button" value="Anmelden">
+                    Anmelden
+                </button>
+                <button type="button" value="Registrieren">
+                    Registrieren
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <form action="Dokumenthochladen.html" class="formbutton">
+            <input type="submit" value="Dokument hochladen">
+        </form>
+        <form action="Dokumentbearbeiten.html" class="formbutton">
+            <input type="submit" value="Dokument bearbeiten">
+        </form>
+        <!-- navigationsspalte -->
+        <ul>
+            <li tabindex="0">
+                <a href="#">Rat der Stadt</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Hauptausschuss und Ältestenrat</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Ausschüsse</a>
+                <ul class="submenu">
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bürgerdienste, öffentliche Ordnung, Anregungen und Beschwerden </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bauen, Verkehr und Grün</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Finanzen, Beteiligungen und Liegenschaften</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kinder, Jugend und Familie</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kultur, Sport und Freizeit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Personal und Organisation</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Soziales, Arbeit und Gesundheit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Umwelt, Stadtgestaltung und Wohnen</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Wirtschafts-, Beschäftigungsförderung, Europa, Wissenschaft und Forschung </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Betriebsausschuss FABIDO</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Rechnungsprüfungsausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Schulausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Wahlprüfungsausschuss</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Behindertenpolitisches Netzwerk</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Beirat bei der unteren Naturschutzbehörde</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Integrationsrat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Seniorenbeirat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Bezirksvertretungen</a>
+                <ul class="submenu">
+                    <li tabindex="0" class="unterpunkt">
+                        <a href="#">Bezirksvertretung Aplerbeck</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Brackel</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Eving</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hörde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hombruch</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Huckarde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Nord</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Ost</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt West</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Lütgendortmund</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Mengede</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Scharnhorst</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        
+    <form action="http://10.4.125.235:8080/benutzer/erstellen" method="post" enctype="multipart/form-data" > 
+        <table border="0" cellspacing="2" cellpadding="2">
+          <tbody>
+            <tr>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Anrede:</td>
+              <td>
+                <select id="geschl">
+                  <option value="0">Bitte wählen</option>
+                  <option value="m">Herr</option>
+                  <option value="f">Frau</option>
+                  <option value="o">Andere</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Vorname:</td>
+              <td>
+                <input maxlength="50" pattern="[A-Za-z]+" id="Vorname" size="45" type="text" placeholder="MAX" required/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Nachname:</td>
+              <td>
+                <input maxlength="50" pattern="[A-Za-z]+" id="Nachname" size="45" type="text" placeholder="MUSTERMANN"required/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Strasse & Nr.:</td>
+              <td>
+                <input maxlength="50" id="Strasse" pattern="[A-Za-z0-9]+" size="45" type="text" placeholder="MUSTERSTR. 1"required/>
+              </td>
+            </tr>
+            <tr>
+            <td align="right">PLZ:</td>
+            <td>
+              <input maxlength="5" id="PLZ" pattern="[0-9]+" size="10"  type="text" placeholder="5 Zahlen"required/>
+            </td>
+            </tr>
+            <tr>
+              <td align="right">Ort:</td>
+              <td>
+                <input maxlength="50" id="Ort" pattern="[A-Za-z]+" size="45" type="text" placeholder="MUSTERORT" required/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Benutzername:</td>
+              <td>
+                <input id="Benutzername" size="45" pattern="[A-Za-z0-9]+" type="text" placeholder="min. 3 Zeichen" required/>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Email:</td>
+              <td>
+                <input maxlength="80" id="Email" size="45" type="email" placeholder="Gültige E-Mail Adresse" required/>
+              </td>
+            </tr>
+        
+            <tr>
+            <td align="right">Passwort:</td>
+            <td>
+                <input id="Passwort1" size="45" type="password" placeholder="min. 8 Zeichen" required/>
+              </td>
+            </tr>
+        
+        
+            <tr>
+            <td align="right">Passwort:</td>
+            <td>
+                <input id="Passwort2" size="45" type="password" placeholder="Passwort Wiederholen" required/>
+              </td>
+            </tr>
+        
+            <tr>
+              <td></td>
+              <td>
+                <input type="submit" value="Registrieren" id="registrieren"/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </form>
+    </main>
+    <aside class="asidesuche">
+        <!--Formular für die Tagsuche-->
+        <form method="get" enctype="multipart/form-data">
+
+            <div>
+                <input type="search" name="sitesearch" id="sitesearch" width=100px placeholder="Website durchsuchen">
+                <input type="submit" value="Suchen" class="suchenbutton">
+                <input type="submit" value="Erweiterte Suche" class="suchenbutton">
+            </div>
+        </form>
+    </aside>
+    <aside class="asidecom">
+        <span class="ueberschrift">Kommentare</span>
+
+    </aside>
+
+    <!-- fußzeile -->
+    <footer>© Meike Cieslak</footer>
+
+</body>
+
+</html>
