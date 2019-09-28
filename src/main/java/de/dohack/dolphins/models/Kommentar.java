@@ -11,6 +11,25 @@ public class Kommentar implements Serializable {
 
   private String inhalt;
 
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "dokument", referencedColumnName = "drucksachenNr")
+  private Dokument dokument;
+
+  @Temporal(value = TemporalType.TIMESTAMP)
+  private Date datum;
+
+  @ManyToOne
+  @JoinColumn(referencedColumnName = "anzeigeName")
+  private Benutzer verfasser;
+
+  public Dokument getDokument() {
+    return dokument;
+  }
+
+  public void setDokument(Dokument dokument) {
+    this.dokument = dokument;
+  }
+
   public int getKommentarID() {
     return kommentarID;
   }
@@ -42,11 +61,4 @@ public class Kommentar implements Serializable {
   public void setVerfasser(Benutzer verfasser) {
     this.verfasser = verfasser;
   }
-
-  @Temporal(value = TemporalType.TIMESTAMP)
-  private Date datum;
-
-  @ManyToOne
-  @JoinColumn(referencedColumnName = "anzeigeName")
-  private Benutzer verfasser;
 }

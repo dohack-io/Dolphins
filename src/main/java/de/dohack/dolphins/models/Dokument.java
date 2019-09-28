@@ -13,7 +13,7 @@ public class Dokument implements Serializable {
 
   private String beschreibung;
 
-  private String inhalt;
+  private String dateipfad;
 
   @Temporal(value = TemporalType.TIMESTAMP)
   private Date erstellDatum;
@@ -46,12 +46,12 @@ public class Dokument implements Serializable {
     this.beschreibung = beschreibung;
   }
 
-  public String getInhalt() {
-    return inhalt;
+  public String getDateipfad() {
+    return dateipfad;
   }
 
-  public void setInhalt(String inhalt) {
-    this.inhalt = inhalt;
+  public void setDateipfad(String inhalt) {
+    this.dateipfad = inhalt;
   }
 
   public Date getErstellDatum() {
