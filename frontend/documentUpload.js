@@ -23,7 +23,7 @@ data.append('File', hochgeladeneDatei);
 
 
 (async () => {
-    const response = await fetch('http://localhost:8080/dokument/erstellen',{
+    const response = await fetch('http://10.4.125.235:8080/dokument/erstellen',{
         method: 'POST',
         headers:{
             'Accept': 'application/json',
