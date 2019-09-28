@@ -1,25 +1,35 @@
 package de.dohack.dolphins.controller;
 
-import de.dohack.dolphins.models.Dokument;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import de.dohack.dolphins.repo.DokumentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
+@RestController
 public class DokumentController {
 
-    private DatabaseController dbController = new DatabaseController();
+  @Autowired private DokumentRepository repository;
 
-    @PostMapping("/dokument-senden")
-    public HttpStatus empfangeDokument(@RequestBody Dokument dokument){
-        return dbController.persist(dokument) ? HttpStatus.OK : HttpStatus.NOT_ACCEPTABLE;
-    }
+  @RequestMapping("/dokument/finde/{id}")
+  public String search(@PathVariable String id) {
+    String dokument = "";
+    dokument = repository.findById(id).toString();
+    return dokument;
+  }
 
-    @GetMapping("/dokument-empfangen")
-    public Dokument sendeDokument(@RequestBody String drucksachenNr){
-        return dbController.find(Dokument.class, drucksachenNr);
-    }
+  @PostMapping("/dokument/erstellen")
+  public String create(@RequestBody String string) {
 
+    // save a single Customer
+
+    //    repository.save(new Customer(customer.getFirstName(), customer.getLastName()));
+
+    System.out.println("MIAMIAMIA " + string);
+    return "Customer is created";
+  }
+
+  @GetMapping("/dokument/hallo")
+  public String dokument() {
+    return "Hallo";
+  }
 }

@@ -9,12 +9,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class DatabaseController {
 
-  public static final Logger logger = LogManager.getLogger("DolphinLogger");
+  //  public static final Logger logger = LogManager.getLogger("DolphinLogger");
 
   private final String persistence_unit_name = "dolphins";
   private EntityManagerFactory factory;
@@ -42,7 +40,7 @@ public class DatabaseController {
       try {
         factory = Persistence.createEntityManagerFactory(persistence_unit_name);
       } catch (Exception e) {
-        logger.error(e);
+        //        logger.error(e);
       }
     }
     return factory;
@@ -62,15 +60,16 @@ public class DatabaseController {
       if (transaction != null) {
         transaction.rollback();
       }
-      logger.error(ex);
+      //      logger.error(ex);
       return false;
     }
     return true;
   }
 
   public boolean persist(Serializable entity) {
-    return persist((Collection<? extends Serializable>) Stream.of(entity)
-            .collect(Collectors.toCollection(HashSet::new)));
+    return persist(
+        (Collection<? extends Serializable>)
+            Stream.of(entity).collect(Collectors.toCollection(HashSet::new)));
   }
 
   public <C extends Serializable> C find(Class<C> clazz, Object id) {
@@ -78,7 +77,7 @@ public class DatabaseController {
     try {
       entity = manager.find(clazz, id);
     } catch (Exception ex) {
-      logger.error(ex);
+      //      logger.error(ex);
       manager.flush();
     }
     return entity;
@@ -86,7 +85,8 @@ public class DatabaseController {
 
   public List execNamedQuery(String queryName, List params) {
     List objs = null;
-    logger.trace("Execute query '" + queryName + "'" + "with params {" + params.toString() + "}");
+    //    logger.trace("Execute query '" + queryName + "'" + "with params {" + params.toString() +
+    // "}");
     try {
       Query query = manager.createNamedQuery(queryName);
       int i = 1;
@@ -95,7 +95,7 @@ public class DatabaseController {
       }
       objs = query.getResultList();
     } catch (Exception ex) {
-      logger.error(ex);
+      //      logger.error(ex);
     }
     return objs;
   }
@@ -110,7 +110,7 @@ public class DatabaseController {
       }
       res = query.getSingleResult();
     } catch (Exception ex) {
-      logger.error(ex);
+      //      logger.error(ex);
     }
     return res;
   }
