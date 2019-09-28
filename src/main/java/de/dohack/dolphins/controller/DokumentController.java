@@ -1,9 +1,9 @@
 package de.dohack.dolphins.controller;
 
 import de.dohack.dolphins.repo.DokumentRepository;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @CrossOrigin()
 @RestController
@@ -18,12 +18,18 @@ public class DokumentController {
     return dokument;
   }
 
-  @PostMapping("/dokument/erstellen")
-  public String create(@RequestBody HttpServletRequest request) {
+  //  @PostMapping("/dokument/erstellen")
+  @RequestMapping(
+      value = "/dokument/erstellen",
+      method = RequestMethod.POST,
+      consumes = {"multipart/form-data"})
+  public String create(@RequestParam("File") MultipartFile multipartFile) {
+
     //    repository.save(new Customer(customer.getFirstName(), customer.getLastName()));
 
-    String titel = request.getParameter("Dokumententitel");
-    System.out.println(titel);
+    //    String titel = request.getParameter("Dokumententitel");
+    //    System.out.println(titel);
+    System.out.println(multipartFile);
     return "Customer is created";
   }
   //
