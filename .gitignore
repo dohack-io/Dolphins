@@ -115,8 +115,14 @@ modules.xml
 # TeXlipse plugin
 .texlipse
 
-# STS (Spring Tool Suite)
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
 .springBeans
+.sts4-cache
 
 # Code Recommenders
 .recommenders/

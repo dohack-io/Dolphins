@@ -2,6 +2,8 @@ plugins {
 	id 'java' // java support
 	id 'application' // creates a JVM executable
 	id 'com.diffplug.gradle.spotless' version '3.23.0'// code format
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
 
 ext {
@@ -9,9 +11,9 @@ ext {
 	javaVersion = JavaVersion.VERSION_1_8
 
 	scriptsLocation = 'gradle' + File.separator + 'scripts' + File.separator //location of script plugins
-	mainClass = ''
+	mainClass = 'de.dohack.dolphins.DolphinsApplication'
 }
-
+//apply plugin: 'org.springframework.boot'
 apply from: scriptsLocation + 'spotless.gradle'
 apply from: scriptsLocation + 'checkJavaVersion.gradle'
 
@@ -31,9 +33,17 @@ dependencies {
 	compile 'org.postgresql:postgresql:+'
 	compile 'org.hibernate:hibernate-entitymanager:5.4.5.Final'
 
-
 	// testing
 	testCompile 'junit:junit:+'
+
+	// Spring Boot
+	implementation 'org.springframework.boot:spring-boot-dependencies:2.1.8.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 wrapper {
@@ -42,8 +52,9 @@ wrapper {
 
 version = '0.1-SNAPSHOT'
 description = 'DOLPHINS'
-sourceCompatibility = javaVersion
-targetCompatibility = javaVersion
+group = 'de.dohack'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
@@ -56,6 +67,12 @@ application {
 run {
 	//Gradle uses an empty Input as default, leading to a non - blocking behaviour and thus an immediate shutdown
 	standardInput = System.in
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
 }
 
 jar {

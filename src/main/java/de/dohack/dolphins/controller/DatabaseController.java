@@ -2,8 +2,11 @@ package de.dohack.dolphins.controller;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import org.apache.log4j.LogManager;
@@ -45,7 +48,7 @@ public class DatabaseController {
     return factory;
   }
 
-  public void persist(Collection<? extends Serializable> entities) {
+  public boolean persist(Collection<? extends Serializable> entities) {
     EntityTransaction transaction = null;
     try {
       transaction = manager.getTransaction();
@@ -60,7 +63,14 @@ public class DatabaseController {
         transaction.rollback();
       }
       logger.error(ex);
+      return false;
     }
+    return true;
+  }
+
+  public boolean persist(Serializable entity) {
+    return persist((Collection<? extends Serializable>) Stream.of(entity)
+            .collect(Collectors.toCollection(HashSet::new)));
   }
 
   public <C extends Serializable> C find(Class<C> clazz, Object id) {
