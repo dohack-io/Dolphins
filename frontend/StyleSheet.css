@@ -1,0 +1,253 @@
+*{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.bild {
+    width: 100%;
+    height: 8cm;
+}
+span.ueberschrift{
+    margin: 20px;
+}
+.wappenbild{
+    height: 100px;
+    width: auto;
+}
+label{
+    width:10em;
+    display: block;
+    float:left;
+}
+.suchenbutton {
+    float: right;
+}
+.logoBox {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+figure{
+    margin: 0;
+}
+#logoboxid > a > figure, #kopf .wappen {
+    width: 54px;
+    height: 54px;
+}
+nav, section, aside{
+     float: left;
+     margin: 1%;
+     padding: 0.5cm;
+}
+
+.formbutton {
+    margin: 5px;
+}
+
+#registry {
+    float: left;
+}
+li {
+    list-style: circle;
+}
+.submenu { 
+    visibility: hidden;  
+    height: 0;
+    z-index: 1000; 
+}
+nav a{
+    text-decoration: none;
+}
+nav li:active.submenu, nav li:focus.submenu {
+    visibility: visible;
+    height: auto;
+}
+nav li:focus-within .submenu {
+	visibility: visible;
+	height: auto;
+}
+ nav a:hover{
+    color: grey;
+}
+.asidesuche{
+     padding: 3px;
+     width: 20%;
+}
+.asidecom {
+    width: 95%;
+    background-color: brown;
+    margin-right: -5px;
+}
+header, .ueberschrift{
+    text-shadow: 2px 2px 7px rgb(68, 67, 67);
+    font-size: 1.4em;
+}  
+footer{
+    font-size: 10px;
+    position: fixed;
+    bottom: 2px;
+}
+
+dialog::backdrop, #backdrop {      
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);    
+  }
+
+dialog {
+    display: none;
+    position: relative;
+    z-index:1002;
+  
+  }
+  
+  dialog[open="open"] {
+      display: block;
+  }
+  
+  @media (min-width: 30em) { 
+    dialog {
+      width: 20em; 
+    }
+  }
+/* PRAKTIKUM 4 */
+/*h1, h2, h3,h4{
+    color: crimson;
+}
+a:link{
+    color: rgb(192, 77, 36);
+}
+a:visited{
+    color: lightslategrey;
+}
+
+/* PRAKTIKUM 5 */
+
+/*input:required {
+    border-color: #3288d8;
+    border-width: 3px;
+}
+input:valid {
+    background-color: #c6ebcf;
+    
+}
+input:invalid {
+    background-color: #ebc6c6;
+  
+}
+
+#brot::after{
+    content: "*erforderliche Angabe";
+}
+
+
+[href^="mailto"]::before{
+    content: url(briefumschlag.jpg);
+    
+}
+/* Praktikum 6 */
+/**{
+    font-family: Helvetica,Arial,sans-serif; 
+}
+
+fieldset{    
+    border-radius:5px;
+    padding: 5px;
+    margin-bottom: 5px;
+   }
+legend{
+    border:1px solid grey;
+    box-shadow: 3px 3px 3px gray;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 3px;
+    border-radius: 6px;
+    color: rgb(182, 19, 19);
+}
+#tableseminar{
+    margin-left: auto;
+    margin-right: auto;
+}
+#tableseminar thead{ 
+    background: lightgray; 
+}
+#tableseminar tbody{ 
+    background: linear-gradient(to right,rgb(255, 205, 205), lightgrey 10%, rgb(255, 205, 205)); 
+}
+ 
+
+h1::first-letter { 
+    font-size: 45px;
+}
+ul.stern{
+    list-style-image: url(gabel.png);
+}
+aside ul{
+    list-style-image: url(redpin.png);
+}
+nav h4{
+    margin: 0px;
+    margin-bottom: 1.33em;
+}
+nav h4::first-letter { 
+    font-size: 20px;
+}
+
+/* PRAKTIKUM 7 */
+/*nav{
+    background-color: lightgrey;
+    padding-bottom: 2px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+
+
+.tablehead{
+    display: table-row;
+}
+.tablebody {
+    display: table-row;
+    
+}
+thead, tbody{
+    float: left;
+    
+}
+table, td, th { 
+    border: 1px solid blue;
+}
+header a{
+    text-decoration: none;
+}
+/* praktikum 9 */
+/*@media only screen and (max-width:768px){
+    main{
+        width: 100%;
+    }
+    aside{
+        width: 95%;
+        height: auto;
+    }
+    header{
+        font-size: 1em;
+    }   
+}
+@media only screen and (max-width:480px){
+    header{
+        font-size: 0em;
+    }   
+}*/

@@ -1,0 +1,186 @@
+<!-- DO!HACK -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- zeichen die benutzt werden können-->
+    <meta charset="utf-8" />
+    <!-- das was im Tab steht -->
+    <title>Dokumentenverwaltung Gremien</title>
+    <!-- einbinden des CSS Sheet -->
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="suche.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+
+</head>
+
+<body class="container">
+    <header>
+        <!-- kopfzeile -->
+        <img class="bild" src="dortmunderu.png" alt="Seminar">
+        <div id="logoboxid" class="logoBox">
+            <div>
+                <a href="Startseite.html" title="Startseite der Dokumentenverwaltung">
+                    <figure>
+                        <img class="wappenbild" src="wappen.png" alt="Wappen der Stadt Dortmund">
+                        <figcaption>
+                            <span class="sr-only">Wappen der Stadt Dortmund</span>
+                        </figcaption>
+                    </figure>
+
+                </a>
+            </div>
+            <div id="divueberschrift">
+                <span class="ueberschrift">Startseite</span>
+            </div>
+            <div id="registry">
+                <input type="button" value="Anmelden">
+                <input type="button" value="Registrieren">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <form action="Dokumenthochladen.html" class="formbutton">
+            <input type="submit" value="Dokument hochladen">
+        </form>
+        <form action="Dokumentbearbeiten.html" class="formbutton">
+            <input type="submit" value="Dokument bearbeiten">
+        </form>
+        <!-- navigationsspalte -->
+        <ul>
+            <li tabindex="0">
+                <a href="#">Rat der Stadt</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Hauptausschuss und Ältestenrat</a>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Ausschüsse</a>
+                <ul class="submenu">
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bürgerdienste, öffentliche Ordnung, Anregungen und Beschwerden </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Bauen, Verkehr und Grün</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Finanzen, Beteiligungen und Liegenschaften</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kinder, Jugend und Familie</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Kultur, Sport und Freizeit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Personal und Organisation</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Soziales, Arbeit und Gesundheit</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Umwelt, Stadtgestaltung und Wohnen</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Ausschuss für Wirtschafts-, Beschäftigungsförderung, Europa, Wissenschaft und Forschung </a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Betriebsausschuss FABIDO</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Rechnungsprüfungsausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Schulausschuss</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Wahlprüfungsausschuss</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li tabindex="0">
+                <a href="#">Behindertenpolitisches Netzwerk</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Beirat bei der unteren Naturschutzbehörde</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Integrationsrat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Seniorenbeirat</a>
+            </li>
+            <li tabindex="0">
+                <a href="#">Bezirksvertretungen</a>
+                <ul class="submenu">
+                    <li tabindex="0" class="unterpunkt">
+                        <a href="#">Bezirksvertretung Aplerbeck</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Brackel</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Eving</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hörde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Hombruch</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Huckarde</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Nord</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt-Ost</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Innenstadt West</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Lütgendortmund</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Mengede</a>
+                    </li>
+                    <li tabindex="0">
+                        <a href="#">Bezirksvertretung Scharnhorst</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- PDF Anzeige -->
+        <object data="test.pdf" style="width:100%;height:1000px">
+            <a href="test.pdf">PDF laden</a>
+        </object>
+    </main>
+    <aside class="asidesuche">
+        <!--Formular für die Tagsuche-->
+        <form method="get" enctype="multipart/form-data">
+
+            <div>
+                <input type="search" name="sitesearch" id="sitesearch" width=100px placeholder="Website durchsuchen">
+                <input type="submit" value="Suchen" class="suchenbutton">
+                <input type="submit" value="Erweiterte Suche" class="suchenbutton">
+            </div>
+        </form>
+    </aside>
+    <aside class="asidecom">
+        <span class="ueberschrift">Kommentare</span>
+
+    </aside>
+
+    <!-- fußzeile -->
+    <footer>© Meike Cieslak</footer>
+</body>
+
+</html>
