@@ -1,4 +1,4 @@
-	document.getElementById("registrieren").addEventListener("click", function(event){
+document.getElementById("registrieren").addEventListener("click", function(event){
     alert('submit abgeschickt');
 });
 
@@ -8,6 +8,7 @@ function ueberpruefung(){
 console.log("start überprüfung..");
 //hier finden Überprüfungen statt
 var geschl = document.getElementById('geschl').value;
+alert(geschl);
 var name = document.getElementById('name').value;
 var Vorname = document.getElementById('Vorname').value;
 var Nachname = document.getElementById('Nachname').value;
@@ -106,7 +107,7 @@ var postObject = {
     'Passwort': Passwort1
 };
 
-console.log(postObject);
+document.write("<h1>Bestätigungsmail wurde Verschickt</h1>");
 //const data = await postData('http://ziel.de', postObject );
 
 }

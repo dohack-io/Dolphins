@@ -21,7 +21,7 @@
         <input id="email" type="email" />
     </form>
     <form method="post">
-        <label for="email">Passwort: </label>
+        <label for="">Passwort: </label>
         <input id="email" type="email" />
     </form>
     <button id="Anmeldung">Anmelden</button>
@@ -34,7 +34,8 @@
         <img class="bild" src="dortmunderu.png" alt="Seminar">
         <div id="logoboxid" class="logoBox">
             <div>
-                <a href="Registrierung_V2.html" title="Datenaufnahme der Dokumentenverwaltung">
+                <!-- alte : Registration_V2.html-->
+                <a href="registrierung.html" title="Datenaufnahme der Dokumentenverwaltung">
                     <figure>
                         <img class="wappenbild" src="wappen.png" alt="Wappen der Stadt Dortmund">
                         <figcaption>
@@ -174,7 +175,7 @@
     </nav>
     <main>
         
-    <form action="http://10.4.125.235:8080/benutzer/erstellen" method="post"> 
+    <form action="http://10.4.125.235:8080/benutzer/erstellen" method="post" enctype="multipart/form-data" > 
         <table border="0" cellspacing="2" cellpadding="2">
           <tbody>
             <tr>
@@ -184,7 +185,7 @@
             <tr>
               <td align="right">Anrede:</td>
               <td>
-                <select name="geschl" id="geschl">
+                <select id="geschl">
                   <option value="0">Bitte wählen</option>
                   <option value="m">Herr</option>
                   <option value="f">Frau</option>
@@ -195,50 +196,50 @@
             <tr>
               <td align="right">Vorname:</td>
               <td>
-                <input maxlength="50" pattern="[A-Za-z]+" name="Vorname" id="Vorname" size="45" type="text" placeholder="MAX" required/>
+                <input maxlength="50" pattern="[A-Za-z]+" id="Vorname" size="45" type="text" placeholder="MAX" required/>
               </td>
             </tr>
             <tr>
               <td align="right">Nachname:</td>
               <td>
-                <input maxlength="50" pattern="[A-Za-z]+" name="Nachname" id="Nachname" size="45" type="text" placeholder="MUSTERMANN"required/>
+                <input maxlength="50" pattern="[A-Za-z]+" id="Nachname" size="45" type="text" placeholder="MUSTERMANN"required/>
               </td>
             </tr>
             <tr>
               <td align="right">Strasse & Nr.:</td>
               <td>
-                <input maxlength="50" name="Strasse" id="Strasse" pattern="[A-Za-z0-9]+" size="45" type="text" placeholder="MUSTERSTR. 1"required/>
+                <input maxlength="50" id="Strasse" pattern="[A-Za-z0-9]+" size="45" type="text" placeholder="MUSTERSTR. 1"required/>
               </td>
             </tr>
             <tr>
             <td align="right">PLZ:</td>
             <td>
-              <input maxlength="5" name="PLZ" id="PLZ" pattern="[0-9]+" size="10"  type="text" placeholder="5 Zahlen"required/>
+              <input maxlength="5" id="PLZ" pattern="[0-9]+" size="10"  type="text" placeholder="5 Zahlen"required/>
             </td>
             </tr>
             <tr>
               <td align="right">Ort:</td>
               <td>
-                <input maxlength="50" name="Ort" id="Ort" pattern="[A-Za-z]+" size="45" type="text" placeholder="MUSTERORT" required/>
+                <input maxlength="50" id="Ort" pattern="[A-Za-z]+" size="45" type="text" placeholder="MUSTERORT" required/>
               </td>
             </tr>
             <tr>
               <td align="right">Benutzername:</td>
               <td>
-                <input name="Benutzername" id="Benutzername" size="45" pattern="[A-Za-z0-9]+" type="text" placeholder="min. 3 Zeichen" required/>
+                <input id="Benutzername" size="45" pattern="[A-Za-z0-9]+" type="text" placeholder="min. 3 Zeichen" required/>
               </td>
             </tr>
             <tr>
               <td align="right">Email:</td>
               <td>
-                <input name="Email" maxlength="80" id="Email" size="45" type="email" placeholder="Gültige E-Mail Adresse" required/>
+                <input maxlength="80" id="Email" size="45" type="email" placeholder="Gültige E-Mail Adresse" required/>
               </td>
             </tr>
         
             <tr>
             <td align="right">Passwort:</td>
             <td>
-                <input name="Passwort" id="Passwort1" size="45" type="password" placeholder="min. 8 Zeichen" required/>
+                <input id="Passwort1" size="45" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" type="password" placeholder="min. 8 Zeichen" required/>
               </td>
             </tr>
         
@@ -246,7 +247,7 @@
             <tr>
             <td align="right">Passwort:</td>
             <td>
-                <input id="Passwort2" size="45" type="password" placeholder="Passwort Wiederholen" required/>
+                <input id="Passwort2" size="45" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" type="password" placeholder="Passwort Wiederholen" required/>
               </td>
             </tr>
         
