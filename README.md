@@ -1,4 +1,4 @@
-![alt text](https://github.com/dohack-io/Dolphins/blob/master/wappen.png "L")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/wappen.png "Logo")
 
 ## Description
 Dolphins (Dortmund local politics help in network solution) is an application which simplifies the exchange between citizens and politicians. Until today, many documents were distributed in analog paper format, usually with long shipment times. Dolphins enables an easy, paperless, direct hosting and display of the documents. It also encourages younger citizens to participate.
@@ -21,7 +21,7 @@ It also protects the environment by digitalizing the previously analog documents
 Our main challenge was building the interface between our Java backend and our JavaScript frontend. none of our team members has ever worked on an inteerface like this so we faced problems we did not know how to interpret and solve. We also needed to learn how to commicate each other problems and requirements effectivley to each other as we needed to work on both ends of client server communication.
 
 ## About your team
-#### Meike Cieslak: 
+#### Meike Cieslak:
 * 25 years old
 * studies Wirtschaftsinformatik BA at FH Dortmund
 * works at Materna
@@ -55,7 +55,12 @@ Our main challenge was building the interface between our Java backend and our J
 As this is mainly a prototype, we need to work at seamless interplay between the components. We also want to implement a comment function as already implemented as an functionless part of the website. There should also be restricted documents which are only available for a subgroup.
 
 ## How does it look?
-//TODO: got any screenshots? post them here!
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dateiliste.png "List of available documents")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dokumentenansicht.png "Display of an document")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/registrierung.png "Registration of an user")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/anmelden.png "Log in")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/hochladen.png "Upload of an document")
+
 
 ## Anything to add?
 -

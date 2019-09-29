@@ -4,14 +4,13 @@ import de.dohack.dolphins.models.Dokument;
 import de.dohack.dolphins.models.Gremium;
 import de.dohack.dolphins.repo.DokumentRepository;
 import de.dohack.dolphins.repo.GremiumRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @CrossOrigin()
 @RestController
@@ -22,23 +21,23 @@ public class DokumentController {
   @Autowired private DokumentRepository repository;
   @Autowired private GremiumRepository gremiumRepository;
 
-//  @RequestMapping(
-//      value = "/dokument/finde/{drucksachenNr}",
-//      method = RequestMethod.GET,
-//      produces = "multipart/form-data")
-//  public MultipartFile search(@PathVariable int drucksachenNr) {
-//    Optional<Dokument> dokument = repository.findById(drucksachenNr);
-//    File file = new File("src/test/resources/input.txt");
-//    FileInputStream input = null;
-//    try {
-//      input = new FileInputStream(file);
-//    } catch (FileNotFoundException e) {
-//      e.printStackTrace();
-//    }
-//    MultipartFile multipartFile = new MockMultipartFile("file",
-//            file.getName(), "text/plain", IOUtils.toByteArray(input));
-//    return repository.findById(drucksachenNr).get();
-//  }
+  //  @RequestMapping(
+  //      value = "/dokument/finde/{drucksachenNr}",
+  //      method = RequestMethod.GET,
+  //      produces = "multipart/form-data")
+  //  public MultipartFile search(@PathVariable int drucksachenNr) {
+  //    Optional<Dokument> dokument = repository.findById(drucksachenNr);
+  //    File file = new File("src/test/resources/input.txt");
+  //    FileInputStream input = null;
+  //    try {
+  //      input = new FileInputStream(file);
+  //    } catch (FileNotFoundException e) {
+  //      e.printStackTrace();
+  //    }
+  //    MultipartFile multipartFile = new MockMultipartFile("file",
+  //            file.getName(), "text/plain", IOUtils.toByteArray(input));
+  //    return repository.findById(drucksachenNr).get();
+  //  }
 
   @RequestMapping(
       value = "/dokument/erstellen",
