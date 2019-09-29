@@ -33,13 +33,21 @@ Lisa Müller:
 
 Mia Krause:
 * 24 years old
-* studies Praktische Informatik at FH Dortmund
+* studies Praktische Informatik BA at FH Dortmund
 * works at ie3
 * skills include Java, Scala, Akka, PSQL, Hibernate, JUnit
 
 Henry Manke:
+* 23 years old
+* studies Praktische Informatik BA at FH Dortmund
+* works at Plettenberger Gesenkschmiede
+* skills include Java, HTML
 
-Rober Manke:
+Robert Manke:
+* 22 years old
+* studies Wirtschaftsingeneurwesen BA at FH Südwestfalen
+* works at Leopold Kostal GmBH & Co. Kg
+* skills include design, mechatronics, HTML, PHP, Java
 
 ## What's next for your project?
 As this is mainly a prototype, we need to work at seamless interplay between the components. We also want to implement a comment function as already implemented as an functionless part of the website. There should also be restricted documents which are only available for a subgroup.
