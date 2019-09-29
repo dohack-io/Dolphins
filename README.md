@@ -48,7 +48,7 @@ Our main challenge was building the interface between our Java backend and our J
 #### Robert Manke:
 * 22 years old
 * studies Wirtschaftsingeneurwesen BA at FH Südwestfalen
-* works at Leopold Kostal GmBH & Co. Kg
+* works at Leopold Kostal GmbH & Co. KG
 * skills include design, mechatronics, HTML, PHP, Java
 
 ## What's next for your project?
