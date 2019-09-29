@@ -22,6 +22,10 @@ public class Dokument implements Serializable {
   @JoinColumn(name = "autor", referencedColumnName = "anzeigename")
   private Benutzer autor;
 
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "gremium", referencedColumnName = "name")
+  private Gremium gremium;
+
   public int getDrucksachennr() {
     return drucksachennr;
   }
@@ -68,5 +72,13 @@ public class Dokument implements Serializable {
 
   public void setAutor(Benutzer autor) {
     this.autor = autor;
+  }
+
+  public Gremium getGremium() {
+    return gremium;
+  }
+
+  public void setGremium(Gremium gremium) {
+    this.gremium = gremium;
   }
 }

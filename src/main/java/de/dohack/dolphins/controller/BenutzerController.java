@@ -4,9 +4,7 @@ import de.dohack.dolphins.models.Benutzer;
 import de.dohack.dolphins.repo.BenutzerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @Controller
@@ -24,37 +22,30 @@ public class BenutzerController {
   @RequestMapping(
       value = "/benutzer/erstellen",
       method = RequestMethod.POST,
-      consumes = {"multipart/form-data"})
+      consumes = "application/x-www-form-urlencoded")
   public String create(
-      @RequestParam("File") MultipartFile multipartFile,
-      @RequestParam("Dokumenttitel") String titel,
-      @RequestParam("Realname") String realname,
-      @RequestParam("Anzeigename") String anzeigename,
+      @RequestParam("geschl") String geschlecht,
+      @RequestParam("Vorname") String vorname,
+      @RequestParam("Nachname") String nachname,
+      @RequestParam("Strasse") String strasse,
+      @RequestParam("PLZ") int plz,
+      @RequestParam("Ort") String ort,
+      @RequestParam("Benutzername") String anzeigename,
       @RequestParam("Email") String email,
-      @RequestParam("Passwort") String passwort, 
-      @RequestParam("Administrator") String adminstrator){
-    String dateipfad = localPath + titel.trim();
+      @RequestParam("Passwort") String passwort) {
     Benutzer benutzer = new Benutzer();
-    benutzer.setPasswort(passwort);
     benutzer.setAnzeigename(anzeigename);
+    benutzer.setPasswort(passwort);
+    benutzer.setVorname(vorname);
+    benutzer.setNachname(nachname);
     benutzer.setEmail(email);
-    benutzer.setAdministrator(adminstrator);
-    benutzer.setRealname(realname);
-    try {
-      multipartFile.transferTo(Paths.get(dateipfad));
-      benutzer.setDateipfad(dateipfad);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-    benutzer = repository.save(benutzer);
+    benutzer.setAdminstrator(false);
+    benutzer.setGeschlecht(geschlecht + "");
+    benutzer.setStrasse(strasse);
+    benutzer.setPlz(plz);
+    benutzer.setOrt(ort);
+    if (anzeigename != null) benutzer = repository.save(benutzer);
 
-    // TODO Tags hinzufügen
-
-    return "Benutzer " + benutzer.getDrucksachennr() + " wurde erstellt";
-  }
-
-  @GetMapping("/benutzer/hallo")
-  public String benutzer() {
-    return "Hallo";
+    return "Benutzer " + benutzer.getAnzeigename() + " wurde erstellt";
   }
 }

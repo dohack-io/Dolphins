@@ -9,6 +9,12 @@ import javax.persistence.Id;
 @Entity
 public class Gremium implements Serializable {
 
+  public Gremium() {};
+
+  public Gremium(String name) {
+    this.name = name;
+  }
+
   @Enumerated(EnumType.STRING)
   private GremienKategorie kategorie;
 

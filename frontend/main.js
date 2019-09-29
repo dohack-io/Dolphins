@@ -1,4 +1,4 @@
-document.getElementById("registrieren").addEventListener("click", function(event){
+	document.getElementById("registrieren").addEventListener("click", function(event){
     alert('submit abgeschickt');
 });
 
