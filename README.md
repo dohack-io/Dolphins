@@ -29,7 +29,7 @@ Our main challenge was building the interface between our Java backend and our J
 
 #### Lisa Müller:
 * 24 years old
-* sudies Wirtschaftsinformatik MA at FH Dortmund
+* studies Wirtschaftsinformatik MA at FH Dortmund
 * works at Elmos
 * skills include Java, Oracle, HTML, CSS, JavaScript, PSQL, SQL, VBA
 
