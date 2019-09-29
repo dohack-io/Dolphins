@@ -55,10 +55,10 @@ Our main challenge was building the interface between our Java backend and our J
 As this is mainly a prototype, we need to work at seamless interplay between the components. We also want to implement a comment function as already implemented as an functionless part of the website. There should also be restricted documents which are only available for a subgroup.
 
 ## How does it look?
-![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dateiliste.png "List of available documents")
-![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dokumentenansicht.png "Display of an document")
-![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/registrierung.png "Registration of an user")
-![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/anmelden.png "Log in")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dateiliste.jpg "List of available documents")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/dokumentenansicht.jpg "Display of an document")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/registrierung.jpg "Registration of an user")
+![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/anmelden.jpg "Log in")
 ![alt text](https://github.com/dohack-io/Dolphins/blob/master/bilder/hochladen.png "Upload of an document")
 
 
